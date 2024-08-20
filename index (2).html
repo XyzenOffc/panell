@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganteng/Cantik Banget Si</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('monyet.jpg'); /* Ganti URL_GAMBAR_MONYET dengan URL gambar monyet */
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            position: relative;
+        }
+
+        h1 {
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            font-size: 3em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            background-color: #ff5733;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #boong {
+            display: none;
+            color: yellow;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            font-size: 2em;
+            margin-top: 20px;
+        }
+
+        /* Teks Created By Xyzen */
+        .created-by {
+            position: absolute;
+            top: 10px;
+            text-align: center;
+            width: 100%;
+            font-size: 1.5em;
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Tombol Chat Developer di bawah teks Created By Xyzen */
+        .chat-developer {
+            position: absolute;
+            top: 50px; /* Letakkan di bawah teks Created By Xyzen */
+            text-align: center;
+            width: 100%;
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Teks Created By Xyzen -->
+    <div class="created-by">Created By Xyzen</div>
+
+    <!-- Tombol Chat Developer -->
+    <a href="https://wa.me/628983807869" class="chat-developer" target="_blank">Chat Developer</a>
+
+    <h1>Yang buka mirip monyet</h1>
+    <button onclick="playSound()">Bercanda. pencet tombol ini</button>
+    <p id="boong">Tapi boong</p>
+
+    <!-- Elemen audio -->
+    <audio id="mySound" src="ci.mp3"></audio>
+
+    <script>
+        function playSound() {
+            // Tampilkan teks "Tapi boong"
+            document.getElementById('boong').style.display = 'block';
+            
+            // Putar suara
+            var sound = document.getElementById('mySound');
+            sound.play();
+        }
+    </script>
+</body>
+</html>
